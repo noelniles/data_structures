@@ -48,6 +48,6 @@ public class LinkedStack<E>
     }
 
     public int size() {
-        return 0;
+        return Node.listLength(top);
     }
 }

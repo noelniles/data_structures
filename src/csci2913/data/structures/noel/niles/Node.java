@@ -48,11 +48,31 @@ public class Node<E>
         return this.link;
     }
 
+    /**
+     * Compute the number of nodes in a linked list.
+     * @param head
+     *   the head reference for a linked list (which may be an empty list
+     *   with a null head)
+     * @return
+     *   the number of nodes in the list with the given head
+     * @note
+     *   A wrong answer occurs for lists longer than Int.MAX_VALUE.
+     **/
+    public static <E> int listLength(Node<E> head)
+    {
+        Node<E> cursor;
+        int answer;
+
+        answer = 0;
+        for (cursor = head; cursor != null; cursor = cursor.link)
+            answer++;
+
+        return answer;
+    }
+
     public String toString()
     {
         String repr = (String) this.data + "->";
         return repr;
     }
-
-
 }
